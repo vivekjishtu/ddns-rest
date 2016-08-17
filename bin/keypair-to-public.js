@@ -4,12 +4,11 @@
 // and generate an output privkey.pem.pub with only the private key
 
 var fs = require('fs');
-var ursa = require('ursa');
+var RSA = require('rsa-compat').RSA;
 var keypairPath = process.argv[2];
 var pubkeyPath = process.argv[3] || (keypairPath + '.pub');
 
-var pem = fs.readFileSync(keypairPath, 'ascii');
-var key = ursa.createPrivateKey(pem);
-var pub = key.toPublicPem();
+var privkeyPem = fs.readFileSync(keypairPath, 'ascii');
+var pubkeyPem = RSA.exportPublicPem({ privateKeyPem: privkeyPem });
 
-fs.writeFileSync(pubkeyPath, pub, 'ascii');
+fs.writeFileSync(pubkeyPath, pubkeyPem, 'ascii');

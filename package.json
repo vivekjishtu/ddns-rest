@@ -2,7 +2,7 @@
   "name": "com.daplie.ddns.api",
   "version": "1.0.0",
   "description": "",
-  "main": "wrapper.js",
+  "main": "app.js",
   "directories": {
     "test": "tests"
   },
@@ -14,5 +14,10 @@
     "url": "git@github.com:Daplie/node-ddns-api.git"
   },
   "author": "AJ ONeal",
-  "license": "(MIT OR Apache-2.0)"
+  "license": "(MIT OR Apache-2.0)",
+  "dependencies": {
+    "express-jwt": "^3.4.0",
+    "jsonwebtoken": "^7.1.9",
+    "native-dns": "^0.7.0"
+  }
 }
