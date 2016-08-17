@@ -3,8 +3,9 @@
 var fs = require('fs');
 var path = require('path');
 var app = require('express')();
-
 var ddnsPubPem = fs.readFileSync(path.join(__dirname, 'pubkey.pem'), 'ascii');
+
+// must be a single shared instance between ddns-api and ddns-server
 var ddnsStore = require('../store').create({
   filepath: path.join(__dirname, 'db.sqlite3')
 });
