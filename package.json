@@ -1,5 +1,5 @@
 {
-  "name": "com.daplie.ddns.api",
+  "name": "ddns-rest",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Daplie/node-ddns-api.git"
+    "url": "git@github.com:Daplie/ddns-rest.git"
   },
   "author": "AJ ONeal",
   "license": "(MIT OR Apache-2.0)",
